@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Cait.Core")]
+[assembly: AssemblyTitle("Cait.Bitcoin.NetTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Divinci Technologies")]
-[assembly: AssemblyProduct("Cait.Core")]
+[assembly: AssemblyProduct("Cait.Bitcoin.NetTests")]
 [assembly: AssemblyCopyright("Copyright © Divinci Technologies 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1bd05a05-9eb7-4786-ac60-955cbe633943")]
+[assembly: Guid("02224ec8-688e-449a-ba91-aa2707d3702f")]
 
 // Version information for an assembly consists of the following four values:
 //

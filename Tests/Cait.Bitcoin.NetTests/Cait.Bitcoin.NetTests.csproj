@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15DE5036-635C-47B8-9A02-DA2DC7B1AD22}</ProjectGuid>
+    <ProjectGuid>{02224EC8-688E-449A-BA91-AA2707D3702F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cait.CoreTests</RootNamespace>
-    <AssemblyName>Cait.CoreTests</AssemblyName>
+    <RootNamespace>Cait.Bitcoin.NetTests</RootNamespace>
+    <AssemblyName>Cait.Bitcoin.NetTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,13 +51,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Extensions\DateTimeExtensionsTests.cs" />
-    <Compile Include="Extensions\EnumExtensionsTests.cs" />
+    <Compile Include="Constants\DefaultServicesTests.cs" />
+    <Compile Include="Extensions\IntegerExtensionsTests.cs" />
+    <Compile Include="Extensions\ServiceExtensionsTests.cs" />
+    <Compile Include="Extensions\StringExtensionsTests.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="HelperTests.cs" />
+    <Compile Include="Messages\Base\MessageHeaderTests.cs" />
+    <Compile Include="Messages\NetworkAddressTests.cs" />
+    <Compile Include="Messages\VersionMessageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Cait.Bitcoin.Net\Cait.Bitcoin.Net.csproj">
+      <Project>{E69A645E-606F-466A-ABE4-A478292B76E7}</Project>
+      <Name>Cait.Bitcoin.Net</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Cait.Core\Cait.Core.csproj">
-      <Project>{1BD05A05-9EB7-4786-AC60-955CBE633943}</Project>
+      <Project>{1bd05a05-9eb7-4786-ac60-955cbe633943}</Project>
       <Name>Cait.Core</Name>
     </ProjectReference>
   </ItemGroup>

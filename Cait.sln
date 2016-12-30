@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.Core", "Cait.Core\Cait
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.CoreTests", "Tests\Cait.CoreTests\Cait.CoreTests.csproj", "{15DE5036-635C-47B8-9A02-DA2DC7B1AD22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.Bitcoin.Net", "Cait.Bitcoin.Net\Cait.Bitcoin.Net.csproj", "{E69A645E-606F-466A-ABE4-A478292B76E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.Bitcoin.NetTests", "Tests\Cait.Bitcoin.NetTests\Cait.Bitcoin.NetTests.csproj", "{02224EC8-688E-449A-BA91-AA2707D3702F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,11 +32,20 @@ Global
 		{15DE5036-635C-47B8-9A02-DA2DC7B1AD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DE5036-635C-47B8-9A02-DA2DC7B1AD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DE5036-635C-47B8-9A02-DA2DC7B1AD22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E69A645E-606F-466A-ABE4-A478292B76E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E69A645E-606F-466A-ABE4-A478292B76E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E69A645E-606F-466A-ABE4-A478292B76E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E69A645E-606F-466A-ABE4-A478292B76E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02224EC8-688E-449A-BA91-AA2707D3702F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02224EC8-688E-449A-BA91-AA2707D3702F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02224EC8-688E-449A-BA91-AA2707D3702F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02224EC8-688E-449A-BA91-AA2707D3702F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{15DE5036-635C-47B8-9A02-DA2DC7B1AD22} = {C5FD4728-DB80-4547-BD5A-EF64F75E142F}
+		{02224EC8-688E-449A-BA91-AA2707D3702F} = {C5FD4728-DB80-4547-BD5A-EF64F75E142F}
 	EndGlobalSection
 EndGlobal

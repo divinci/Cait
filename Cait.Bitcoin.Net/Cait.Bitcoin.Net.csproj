@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1BD05A05-9EB7-4786-AC60-955CBE633943}</ProjectGuid>
+    <ProjectGuid>{E69A645E-606F-466A-ABE4-A478292B76E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cait.Core</RootNamespace>
-    <AssemblyName>Cait.Core</AssemblyName>
+    <RootNamespace>Cait.Bitcoin.Net</RootNamespace>
+    <AssemblyName>Cait.Bitcoin.Net</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\DateTimeExtensions.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Constants\Encodings.cs" />
+    <Compile Include="Constants\Magic.cs" />
+    <Compile Include="Constants\MessageType.cs" />
+    <Compile Include="Constants\Service.cs" />
+    <Compile Include="Constants\ProtocolVersion.cs" />
+    <Compile Include="Extensions\IntegerExtensions.cs" />
+    <Compile Include="Extensions\ServiceExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Interfaces\Net\IDatagram.cs" />
-    <Compile Include="Interfaces\Net\IDatagramHeader.cs" />
-    <Compile Include="Interfaces\Net\IDatagramPayload.cs" />
+    <Compile Include="Messages\Base\Message.cs" />
+    <Compile Include="Messages\Base\MessagePayload.cs" />
+    <Compile Include="Messages\Base\MessageHeader.cs" />
+    <Compile Include="Messages\NetworkAddressPayload.cs" />
+    <Compile Include="Messages\VersionMessagePayload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cait.Core\Cait.Core.csproj">
+      <Project>{1bd05a05-9eb7-4786-ac60-955cbe633943}</Project>
+      <Name>Cait.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
