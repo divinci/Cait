@@ -1,6 +1,7 @@
 ﻿using Cait.Bitcoin.Net.Constants;
 using Cait.Bitcoin.Net.Extensions;
 using Cait.Bitcoin.Net.Messages.Base;
+using Cait.Bitcoin.Net.Messages.Base.Attributes;
 using Cait.Core.Extensions;
 using Cait.Core.Interfaces.Net;
 using System;
@@ -12,7 +13,8 @@ namespace Cait.Bitcoin.Net.Messages
     /// <summary>
     /// https://en.bitcoin.it/wiki/Protocol_documentation#version
     /// </summary>
-    public class VersionMessagePayload : IDatagramPayload
+    [MessageHeaderType(MessageType.Version)]
+    public class VersionMessage : IDatagramPayload
     {
         /// <summary>
         /// Identifies protocol version being used by the node
@@ -22,7 +24,7 @@ namespace Cait.Bitcoin.Net.Messages
         /// <summary>
         /// bitfield of features to be enabled for this connection
         /// </summary>
-        public Service[] Services { get; private set; }
+        public ServiceFlag[] Services { get; private set; }
 
         /// <summary>
         /// standard UNIX timestamp in seconds
@@ -32,12 +34,12 @@ namespace Cait.Bitcoin.Net.Messages
         /// <summary>
         /// The network address of the node receiving this message
         /// </summary>
-        public NetworkAddressPayload RemoteNetworkAddress { get; private set; }
+        public NetworkAddress RemoteNetworkAddress { get; private set; }
 
         /// <summary>
         /// The network address of the node emitting this message
         /// </summary>
-        public NetworkAddressPayload LocalNetworkAddress { get; private set; }
+        public NetworkAddress LocalNetworkAddress { get; private set; }
 
         /// <summary>
         /// Node random nonce, randomly generated every time a version packet is sent. This nonce is used to detect connections to self.
@@ -59,12 +61,12 @@ namespace Cait.Bitcoin.Net.Messages
         /// </summary>
         public bool Relay { get; private set; }
 
-        public VersionMessagePayload(
+        public VersionMessage(
             ProtocolVersion protocolVersion,
-            Service[] services,
+            ServiceFlag[] services,
             DateTime timeStamp,
-            NetworkAddressPayload remoteNetworkAddress,
-            NetworkAddressPayload localNetworkAddress,
+            NetworkAddress remoteNetworkAddress,
+            NetworkAddress localNetworkAddress,
             ulong nonce,
             string userAgent,
             int startHeight,
@@ -81,15 +83,37 @@ namespace Cait.Bitcoin.Net.Messages
             this.Relay = relay;
         }
 
+        public VersionMessage(
+            ProtocolVersion protocolVersion,
+            ServiceFlag service,
+            DateTime timeStamp,
+            NetworkAddress remoteNetworkAddress,
+            NetworkAddress localNetworkAddress,
+            ulong nonce,
+            string userAgent,
+            int startHeight,
+            bool relay) : base()
+        {
+            this.ProtocolVersion = protocolVersion;
+            this.Services = new ServiceFlag[] { service };
+            this.TimeStamp = timeStamp;
+            this.RemoteNetworkAddress = remoteNetworkAddress;
+            this.LocalNetworkAddress = localNetworkAddress;
+            this.Nonce = nonce;
+            this.UserAgent = userAgent;
+            this.StartHeight = startHeight;
+            this.Relay = relay;
+        }
+
         public byte[] GetBytes(IDatagramHeader header)
         {
             if (header == null)
                 throw new ArgumentNullException(nameof(header), "Argument must not be null.");
 
-            if (!(header is MessageHeader))
-                throw new ArgumentNullException(nameof(header), "Argument must be a MessageHeader type.");
+            if (!(header is Message))
+                throw new ArgumentException(nameof(header), "Argument must be a MessageHeader type.");
 
-            MessageHeader messageHeader = header as MessageHeader;
+            Message messageHeader = header as Message;
 
             using (MemoryStream ms = new MemoryStream())
             {
@@ -114,7 +138,10 @@ namespace Cait.Bitcoin.Net.Messages
 
                 ms.Write(BitConverter.GetBytes(this.StartHeight), 0, 4);
 
-                ms.Write(BitConverter.GetBytes(this.Relay), 0, 1);
+                if(this.ProtocolVersion >= ProtocolVersion.v0_10_0)
+                {
+                    ms.Write(BitConverter.GetBytes(this.Relay), 0, 1);
+                }
 
                 return ms.ToArray();
             }

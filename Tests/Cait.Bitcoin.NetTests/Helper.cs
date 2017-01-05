@@ -1,11 +1,12 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 
 namespace Cait.Bitcoin.NetTests
 {
     public static class Helper
     {
-        public static string SimpleHex(this string hexDumpDescription)
+        public static string AsSimpleHexString(this string hexDumpDescription)
         {
             StringBuilder sb = new StringBuilder();
             using (TextReader sr = new StringReader(hexDumpDescription))
@@ -24,6 +25,11 @@ namespace Cait.Bitcoin.NetTests
                 }
             }
             return sb.ToString().ToLower();
+        }
+
+        public static string AsSimpleHexString(this byte[] bytes)
+        {
+            return BitConverter.ToString(bytes).AsSimpleHexString();
         }
     }
 }

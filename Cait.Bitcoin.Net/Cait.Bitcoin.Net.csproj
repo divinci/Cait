@@ -43,16 +43,18 @@
     <Compile Include="Constants\Encodings.cs" />
     <Compile Include="Constants\Magic.cs" />
     <Compile Include="Constants\MessageType.cs" />
-    <Compile Include="Constants\Service.cs" />
+    <Compile Include="Constants\Randoms.cs" />
+    <Compile Include="Constants\ServiceFlag.cs" />
     <Compile Include="Constants\ProtocolVersion.cs" />
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Extensions\ServiceExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Messages\Base\Message.cs" />
+    <Compile Include="Messages\AddressMessagePayload.cs" />
+    <Compile Include="Messages\Base\Attributes\MessageHeaderType.cs" />
     <Compile Include="Messages\Base\MessagePayload.cs" />
-    <Compile Include="Messages\Base\MessageHeader.cs" />
-    <Compile Include="Messages\NetworkAddressPayload.cs" />
-    <Compile Include="Messages\VersionMessagePayload.cs" />
+    <Compile Include="Messages\Base\Message.cs" />
+    <Compile Include="Messages\NetworkAddress.cs" />
+    <Compile Include="Messages\VersionMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
     public class IntegerExtensionsTests
     {
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_From_A_Byte_Under_The_253_Threshold()
+        public void Byte_GetBytesVariableLength_Under_The_253_Threshold()
         {
             byte numberToTest = 139;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -16,7 +16,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_For_Max_Byte()
+        public void Byte_GetBytesVariableLength_For_Max_Byte()
         {
             byte numberToTest = byte.MaxValue;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -25,7 +25,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_For_Max_Short()
+        public void Short_GetBytesVariableLength_For_Max_Short()
         {
             short numberToTest = short.MaxValue;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -34,7 +34,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_For_Max_Int()
+        public void Int_GetBytesVariableLength_For_Max_Int()
         {
             int numberToTest = int.MaxValue;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -43,7 +43,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_For_Max_Long()
+        public void Long_GetBytesVariableLength_For_Max_Long()
         {
             long numberToTest = long.MaxValue;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -52,7 +52,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_From_A_Short()
+        public void Short_GetBytesVariableLength()
         {
             short numberToTest = 500;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -61,7 +61,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_From_A_Int32()
+        public void Int_GetBytesVariableLength()
         {
             int numberToTest = 500;
             byte[] result = numberToTest.GetBytesVariableLength();
@@ -70,7 +70,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
         }
 
         [TestMethod()]
-        public void Get_A_Variable_Length_Byte_Array_From_A_Int64()
+        public void Long_GetBytesVariableLength()
         {
             long numberToTest = 500;
             byte[] result = numberToTest.GetBytesVariableLength();

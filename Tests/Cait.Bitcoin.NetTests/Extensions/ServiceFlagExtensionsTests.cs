@@ -4,15 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Cait.Bitcoin.Net.Extensions.Tests
 {
     [TestClass()]
-    public class ServiceExtensionsTests
+    public class ServiceFlagExtensionsTests
     {
         [TestMethod()]
-        public void AsBitfield_SanityTest()
+        public void ServiceFlags_AsBitfield_SanityTest()
         {
-            Service[] services = new Service[3] {
-                Service.NODE_NETWORK,
-                Service.NODE_BLOOM,
-                Service.NODE_WITNESS
+            ServiceFlag[] services = new ServiceFlag[3] {
+                ServiceFlag.NODE_NETWORK,
+                ServiceFlag.NODE_BLOOM,
+                ServiceFlag.NODE_WITNESS
             };
 
             int servicesBitField = services.AsBitfield();

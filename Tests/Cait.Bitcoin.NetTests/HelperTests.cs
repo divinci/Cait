@@ -7,7 +7,7 @@ namespace Cait.Bitcoin.NetTests
     public class HelperTest
     {
         [TestMethod()]
-        public void SimpleHex_SanityTest()
+        public void String_SimpleHex_SanityTest()
         {
             string testString = @"
 
@@ -44,7 +44,7 @@ namespace Cait.Bitcoin.NetTests
                  0F 2F 53 61 74 6F 73 68 69 3A 30 2E 37 2E 32 2F
                  C0 3E 03 00".Replace(Environment.NewLine, "").Replace(" ", "").ToLower();
 
-            Assert.AreEqual(expected, testString.SimpleHex());
+            Assert.AreEqual(expected, testString.AsSimpleHexString());
         }
     }
 }

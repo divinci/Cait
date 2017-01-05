@@ -3,7 +3,7 @@
 namespace Cait.Bitcoin.Net.Constants
 {
     [Flags]
-    public enum Service : ulong
+    public enum ServiceFlag : ulong
     {
         // Nothing
         NODE_NONE = 0,
@@ -40,14 +40,14 @@ namespace Cait.Bitcoin.Net.Constants
         // BIP process.
     }
 
-    public static class DefaultServices
+    public static class ServiceFlags
     {
-        public static Service[] ForVersion(ProtocolVersion protocolVersion)
+        public static ServiceFlag[] ForVersion(ProtocolVersion protocolVersion)
         {
             switch (protocolVersion)
             {
                 case ProtocolVersion.v0_13_1:
-                    return new Service[] { Service.NODE_NETWORK, Service.NODE_BLOOM, Service.NODE_WITNESS };
+                    return new ServiceFlag[] { ServiceFlag.NODE_NETWORK, ServiceFlag.NODE_BLOOM, ServiceFlag.NODE_WITNESS };
 
                 default:
                     throw new NotImplementedException();

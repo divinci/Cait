@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.Bitcoin.Net", "Cait.Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cait.Bitcoin.NetTests", "Tests\Cait.Bitcoin.NetTests\Cait.Bitcoin.NetTests.csproj", "{02224EC8-688E-449A-BA91-AA2707D3702F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{43F03400-499A-4418-99D4-C3493BB6D0AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{02224EC8-688E-449A-BA91-AA2707D3702F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02224EC8-688E-449A-BA91-AA2707D3702F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02224EC8-688E-449A-BA91-AA2707D3702F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F03400-499A-4418-99D4-C3493BB6D0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F03400-499A-4418-99D4-C3493BB6D0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F03400-499A-4418-99D4-C3493BB6D0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F03400-499A-4418-99D4-C3493BB6D0AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,9 +2,6 @@
 {
     public interface IDatagram
     {
-        IDatagramHeader DatagramHeader { get; }
-        IDatagramPayload DatagramPayload { get; }
-
         byte[] GetBytes();
     }
 }

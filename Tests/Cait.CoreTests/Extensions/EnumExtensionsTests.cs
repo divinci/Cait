@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Cait.Core.Extensions.Tests
 {
@@ -18,7 +19,7 @@ namespace Cait.Core.Extensions.Tests
         }
 
         [TestMethod()]
-        public void CreateFlagsBitfieldTest_SanityTest()
+        public void Enum_CreateFlagsBitfield_SanityTest()
         {
             Enum[] testFlagEnums = new Enum[]
             {
@@ -33,15 +34,17 @@ namespace Cait.Core.Extensions.Tests
         }
 
         [TestMethod()]
+        [ExcludeFromCodeCoverage()]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void CreateFlagsBitfieldTest_Null_Throws_Exception()
+        public void Enum_CreateFlagsBitfield_Null_Throws_Exception()
         {
             Enum[] testFlagEnums = null;
             int bitwiseFlagField = testFlagEnums.CreateFlagsBitfield();
+            Assert.Fail("Exception expected");
         }
 
         [TestMethod()]
-        public void CreateFlagsBitfieldTest_Empty_Returns_Zero()
+        public void Enum_CreateFlagsBitfield_Empty_Returns_Zero()
         {
             Enum[] testFlagEnums = new Enum[]{};
             int bitwiseFlagField = testFlagEnums.CreateFlagsBitfield();

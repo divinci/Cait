@@ -51,13 +51,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Constants\DefaultServicesTests.cs" />
+    <Compile Include="Constants\RandomsTests.cs" />
+    <Compile Include="Constants\ServiceFlagsTests.cs" />
+    <Compile Include="DummyIDatagramHeader.cs" />
     <Compile Include="Extensions\IntegerExtensionsTests.cs" />
-    <Compile Include="Extensions\ServiceExtensionsTests.cs" />
+    <Compile Include="Extensions\ServiceFlagExtensionsTests.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="HelperTests.cs" />
-    <Compile Include="Messages\Base\MessageHeaderTests.cs" />
+    <Compile Include="Messages\AddressMessageTests.cs" />
+    <Compile Include="Messages\Base\Attributes\MessageHeaderTypeTests.cs" />
+    <Compile Include="Messages\VerackMessageTests.cs" />
     <Compile Include="Messages\NetworkAddressTests.cs" />
     <Compile Include="Messages\VersionMessageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,7 @@ namespace Cait.Bitcoin.Net.Extensions.Tests
     public class StringExtensionsTests
     {
         [TestMethod()]
-        public void GetBytesVariableLength_SanityTest()
+        public void String_GetBytesVariableLength_SanityTest()
         {
             string valueToTest = "/Satoshi:0.7.2/";
             byte[] result = valueToTest.GetBytesVariableLength();
