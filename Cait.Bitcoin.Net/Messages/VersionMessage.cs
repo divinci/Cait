@@ -138,7 +138,7 @@ namespace Cait.Bitcoin.Net.Messages
 
                 ms.Write(BitConverter.GetBytes(this.StartHeight), 0, 4);
 
-                if(this.ProtocolVersion >= ProtocolVersion.v0_10_0)
+                if (this.ProtocolVersion >= ProtocolVersion.v0_10_0)
                 {
                     ms.Write(BitConverter.GetBytes(this.Relay), 0, 1);
                 }

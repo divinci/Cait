@@ -1,11 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Cait.Bitcoin.Net.Messages.Base.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cait.Bitcoin.Net.Constants;
+﻿using Cait.Bitcoin.Net.Constants;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Cait.Bitcoin.Net.Messages.Base.Attributes.Tests
 {

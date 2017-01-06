@@ -1,5 +1,4 @@
-﻿using Cait.Core.Extensions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Cait.Core.Extensions.Tests

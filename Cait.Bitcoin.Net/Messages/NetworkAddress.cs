@@ -4,8 +4,8 @@ using Cait.Bitcoin.Net.Messages.Base;
 using Cait.Core.Extensions;
 using Cait.Core.Interfaces.Net;
 using System;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Net;
 
 namespace Cait.Bitcoin.Net.Messages
@@ -24,6 +24,7 @@ namespace Cait.Bitcoin.Net.Messages
         {
             return new NetworkAddress(serviceFlag, new IPAddress(new byte[] { 0, 0, 0, 0 }), 0);
         }
+
         public static NetworkAddress Unroutable(ServiceFlag[] serviceFlags)
         {
             return new NetworkAddress(serviceFlags, new IPAddress(new byte[] { 0, 0, 0, 0 }), 0);

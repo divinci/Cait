@@ -1,12 +1,11 @@
-﻿using Cait.Bitcoin.Net.Messages;
-using Cait.Bitcoin.Net.Constants;
+﻿using Cait.Bitcoin.Net.Constants;
 using Cait.Bitcoin.Net.Messages.Base;
 using Cait.Bitcoin.NetTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using static Cait.Bitcoin.NetTests.Helper;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Cait.Bitcoin.Net.Messages.Tests
 {
@@ -434,7 +433,7 @@ namespace Cait.Bitcoin.Net.Messages.Tests
                 8333
                 );
 
-            Assert.IsFalse(a.Equals(b));    
+            Assert.IsFalse(a.Equals(b));
         }
 
         [TestMethod()]

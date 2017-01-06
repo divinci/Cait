@@ -1,8 +1,6 @@
-﻿using Cait.Core.Extensions;
-using Cait.Bitcoin.Net.Messages.Base;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Cait.Bitcoin.Net.Messages.Base;
 using Cait.Bitcoin.NetTests;
-using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Cait.Bitcoin.Net.Messages.Tests
 {

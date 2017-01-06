@@ -1,7 +1,6 @@
 ﻿using Cait.Bitcoin.Net.Constants;
 using Cait.Bitcoin.Net.Messages.Base;
 using Cait.Bitcoin.NetTests;
-using Cait.Core.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -36,7 +35,7 @@ namespace Cait.Bitcoin.Net.Messages.Tests
                 result.AsSimpleHexString(),
                 @"
                     // Taken from https://en.bitcoin.it/wiki/Protocol_documentation#version
-                    
+
                     // Message Header:
                      F9 BE B4 D9                                // Main network magic bytes
                      76 65 72 73 69 6F 6E 00 00 00 00 00        // 'version' command
@@ -80,7 +79,7 @@ namespace Cait.Bitcoin.Net.Messages.Tests
                 result.AsSimpleHexString(),
                 @"
                     // Taken from https://en.bitcoin.it/wiki/Protocol_documentation#version
-                    
+
                     // Message Header:
                     // F9 BE B4 D9                                // Main network magic bytes
                     // 76 65 72 73 69 6F 6E 00 00 00 00 00        // 'version' command
@@ -112,7 +111,7 @@ namespace Cait.Bitcoin.Net.Messages.Tests
                 ServiceFlag.NODE_NETWORK,
                 timeStamp,
                 new NetworkAddress(ServiceFlag.NODE_NETWORK, IPAddress.Any, 0),
-                new NetworkAddress(ServiceFlag.NODE_NETWORK, IPAddress.Any, 0),7284544412836900411,
+                new NetworkAddress(ServiceFlag.NODE_NETWORK, IPAddress.Any, 0), 7284544412836900411,
                 "/Satoshi:0.7.2/",
                 212672,
                 true);
@@ -123,7 +122,7 @@ namespace Cait.Bitcoin.Net.Messages.Tests
                 result.AsSimpleHexString(),
                 @"
                     // Taken from https://en.bitcoin.it/wiki/Protocol_documentation#version
-                    
+
                     // Message Header:
                     // F9 BE B4 D9                                // Main network magic bytes
                     // 76 65 72 73 69 6F 6E 00 00 00 00 00        // 'version' command

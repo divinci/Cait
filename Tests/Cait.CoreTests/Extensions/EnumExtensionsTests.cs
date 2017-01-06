@@ -46,7 +46,7 @@ namespace Cait.Core.Extensions.Tests
         [TestMethod()]
         public void Enum_CreateFlagsBitfield_Empty_Returns_Zero()
         {
-            Enum[] testFlagEnums = new Enum[]{};
+            Enum[] testFlagEnums = new Enum[] { };
             int bitwiseFlagField = testFlagEnums.CreateFlagsBitfield();
             Assert.AreEqual(0, bitwiseFlagField);
         }

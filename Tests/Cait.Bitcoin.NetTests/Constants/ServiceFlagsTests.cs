@@ -1,11 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Cait.Bitcoin.Net.Constants;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace Cait.Bitcoin.Net.Constants.Tests
 {
@@ -23,7 +19,7 @@ namespace Cait.Bitcoin.Net.Constants.Tests
                 ProtocolVersion.v0_13_1
             };
 
-            foreach(ProtocolVersion protocolVersion in Enum.GetValues(typeof(ProtocolVersion)).Cast<ProtocolVersion>())
+            foreach (ProtocolVersion protocolVersion in Enum.GetValues(typeof(ProtocolVersion)).Cast<ProtocolVersion>())
             {
                 if (protocolVersions_With_ForVersion_Unit_Test.Contains(protocolVersion))
                     continue;
@@ -33,7 +29,7 @@ namespace Cait.Bitcoin.Net.Constants.Tests
                     ServiceFlags.ForVersion(protocolVersion);
                     passed = false;
                 }
-                catch{}
+                catch { }
             }
 
             Assert.IsTrue(passed);
